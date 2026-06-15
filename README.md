@@ -193,15 +193,17 @@ partitions = event_date_kst=2019-10-01, event_date_kst=2019-10-02
 
 ## 11. AI 도구 사용 범위
 
-AI 도구는 요구사항 정리, Scala/Spark 문법 확인, Docker/sbt 실행 구조 정리, README 초안 작성 보조에 사용했습니다.
+AI 도구는 ChatGPT와 OpenCode를 사용했습니다.
 
-프롬프트 전략은 전체 과제를 한 번에 생성하도록 맡기지 않고, CSV 로딩, KST partition, sessionization, Hive external table, WAU 쿼리처럼 작업 단위를 나누어 검토하는 방식으로 진행했습니다.
+주로 요구사항을 체크리스트로 정리하고, Scala/Spark API 사용법이나 Docker/sbt 실행 환경 구성에서 놓칠 수 있는 부분을 확인하는 보조 도구로 활용했습니다. README 문장 정리와 테스트 케이스 점검에도 일부 사용했습니다.
 
+프롬프트는 구현 결과를 바로 요청하기보다, 요구사항별 설계 방향과 검증 포인트를 확인하는 방식으로 작성했습니다.
 
-최종적으로 직접 확인한 부분은 다음과 같습니다.
+최종 설계 판단과 검증은 직접 수행했습니다.
 
-- KST 기준 `event_date_kst` 생성 방식
-- 5분 이상 gap 조건(`>= 300 seconds`) 기반 세션 생성
-- 전체 데이터 처리 실행
-- synthetic test 실행
-- Spark SQL WAU 쿼리 실행과 결과 확인
+* KST 기준 `event_date_kst` 생성 방식 결정
+* 5분 이상 gap 조건(`>= 300 seconds`) 기반 세션 생성 기준 결정
+* synthetic test 데이터 구성과 경계조건 확인
+* 전체 원본 데이터 처리 실행
+* Spark SQL WAU 쿼리 실행과 결과 확인
+
