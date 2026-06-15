@@ -1,0 +1,9 @@
+event_time,event_type,product_id,category_id,category_code,brand,price,user_id,user_session
+2019-10-01 14:59:00 UTC,view,1,10,test.category,test,10.0,100,test-session-1
+2019-10-01 15:04:00 UTC,view,2,10,test.category,test,10.0,100,test-session-1
+2019-10-01 15:08:59 UTC,view,3,10,test.category,test,10.0,100,test-session-1
+2019-10-01 15:13:59 UTC,view,4,10,test.category,test,10.0,100,test-session-1
+2019-10-01 15:00:00 UTC,view,5,10,test.category,test,10.0,200,test-session-2
+2019-10-01 15:10:00 UTC,view,6,10,test.category,test,10.0,200,test-session-2
+2019-10-01 15:06:00 UTC,view,8,10,test.category,test,10.0,300,test-session-3
+2019-10-01 15:00:00 UTC,view,7,10,test.category,test,10.0,300,test-session-3

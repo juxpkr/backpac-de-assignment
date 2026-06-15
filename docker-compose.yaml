@@ -1,0 +1,20 @@
+services:
+  spark-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: backpac-spark-app:local
+    working_dir: /app
+    volumes:
+      - .:/app
+      - sbt-cache:/root/.sbt
+      - ivy-cache:/root/.ivy2
+      - coursier-cache:/root/.cache/coursier
+    environment:
+      SPARK_LOCAL_IP: 127.0.0.1
+      SPARK_LOCAL_HOSTNAME: localhost
+
+volumes:
+  sbt-cache:
+  ivy-cache:
+  coursier-cache:

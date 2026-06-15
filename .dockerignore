@@ -1,0 +1,16 @@
+# 빌드/실행 산출물
+target/
+warehouse/
+spark-warehouse/
+metastore_db/
+derby.log
+
+# 로컬 입력 데이터
+data/raw/
+data/*.zip
+
+# Git/editor 파일
+.git/
+.idea/
+.vscode/
+.DS_Store
