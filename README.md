@@ -186,10 +186,10 @@ partitions = event_date_kst=2019-10-01, event_date_kst=2019-10-02
 
 과제에서 Spark Application 구현 언어가 Scala 또는 Java로 제한되어 있어 Scala를 선택했습니다.
 
-기존에는 주로 PySpark로 Spark를 사용했지만, 이번 과제는 DataFrame API와 SQL 중심의 배치 처리라 Scala로도 처리 흐름을 명확하게 작성할 수 있다고 판단했습니다.
+Spark는 Scala 기반의 API와 예제가 풍부하고, DataFrame API, Window 함수, Spark SQL을 자연스럽게 사용할 수 있습니다. Java로도 구현할 수 있지만, Spark의 DataFrame 연산과 Window 함수 체이닝을 표현할 때 Scala가 더 간결해 과제의 핵심 로직을 드러내기 쉽다고 판단했습니다.
 
-- Spark가 Scala 기반으로 개발되어 DataFrame API 사용이 자연스럽습니다.
-- Java보다 Spark batch 코드를 간결하게 작성할 수 있습니다.
+이번 과제는 CSV 로그를 읽어 KST 기준 partition 컬럼을 만들고, user_id별 sessionization을 수행한 뒤 Parquet으로 저장하고 Hive external table로 등록하는 배치 작업입니다. 이러한 흐름은 Spark DataFrame API 중심으로 표현하기에 적합하므로 Scala를 사용했습니다.
+
 
 ## 11. AI 도구 사용 범위
 
